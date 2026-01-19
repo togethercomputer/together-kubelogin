@@ -7,7 +7,7 @@ package authentication_mock
 import (
 	"context"
 
-	"github.com/int128/kubelogin/pkg/usecases/authentication"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
 	mock "github.com/stretchr/testify/mock"
 )
 

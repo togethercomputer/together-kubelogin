@@ -12,8 +12,8 @@ import (
 
 	"github.com/gofrs/flock"
 	"github.com/google/wire"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/tokencache"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
 	"github.com/zalando/go-keyring"
 )
 
@@ -165,7 +165,7 @@ func (r *Repository) Lock(config tokencache.Config, key tokencache.Key) (io.Clos
 		return nil, fmt.Errorf("could not create directory %s: %w", config.Directory, err)
 	}
 	// Do not lock the token cache file.
-	// https://github.com/int128/kubelogin/issues/1144
+	// https://github.com/pahluwalia-tcloud/together-kubelogin/issues/1144
 	lockFilepath := filepath.Join(config.Directory, checksum+".lock")
 	lockFile := flock.New(lockFilepath)
 	if err := lockFile.Lock(); err != nil {

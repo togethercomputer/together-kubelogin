@@ -6,15 +6,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/int128/kubelogin/integration_test/httpdriver"
-	"github.com/int128/kubelogin/integration_test/keypair"
-	"github.com/int128/kubelogin/integration_test/kubeconfig"
-	"github.com/int128/kubelogin/integration_test/oidcserver"
-	"github.com/int128/kubelogin/integration_test/oidcserver/testconfig"
-	"github.com/int128/kubelogin/pkg/di"
-	"github.com/int128/kubelogin/pkg/infrastructure/browser"
-	"github.com/int128/kubelogin/pkg/testing/clock"
-	"github.com/int128/kubelogin/pkg/testing/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/httpdriver"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/keypair"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/kubeconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/testconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/di"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/browser"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/clock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
 )
 
 // Run the integration tests of the Login use-case.

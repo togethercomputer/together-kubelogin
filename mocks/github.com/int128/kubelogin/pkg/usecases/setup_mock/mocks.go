@@ -7,7 +7,7 @@ package setup_mock
 import (
 	"context"
 
-	"github.com/int128/kubelogin/pkg/usecases/setup"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/setup"
 	mock "github.com/stretchr/testify/mock"
 )
 

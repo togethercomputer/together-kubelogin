@@ -11,8 +11,8 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/go-cmp/cmp"
-	"github.com/int128/kubelogin/integration_test/oidcserver/testconfig"
-	testingJWT "github.com/int128/kubelogin/pkg/testing/jwt"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/testconfig"
+	testingJWT "github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/jwt"
 )
 
 func New(t *testing.T, issuerURL string, config testconfig.Config) Service {

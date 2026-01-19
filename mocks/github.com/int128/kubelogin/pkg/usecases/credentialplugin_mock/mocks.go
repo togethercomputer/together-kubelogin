@@ -7,7 +7,7 @@ package credentialplugin_mock
 import (
 	"context"
 
-	"github.com/int128/kubelogin/pkg/usecases/credentialplugin"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/credentialplugin"
 	mock "github.com/stretchr/testify/mock"
 )
 

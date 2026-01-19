@@ -7,7 +7,7 @@ import "net/http"
 // Token retrievel fails when an auth code has been retrieved using Azure AD
 // Single Page Application due to the missing "Origin" header for CORS
 // validation.
-// https://github.com/int128/kubelogin/issues/1048
+// https://github.com/pahluwalia-tcloud/together-kubelogin/issues/1048
 type WithHeader struct {
 	Base           http.RoundTripper
 	RequestHeaders map[string]string

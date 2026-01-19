@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/usecases/credentialplugin"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/credentialplugin"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

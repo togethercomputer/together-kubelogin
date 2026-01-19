@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
-	"github.com/int128/kubelogin/pkg/kubeconfig"
-	"github.com/int128/kubelogin/pkg/usecases/standalone"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/standalone"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )
@@ -17,7 +17,7 @@ To show the setup instruction:
 
 	kubectl oidc-login setup
 
-See https://github.com/int128/kubelogin for more.
+See https://github.com/pahluwalia-tcloud/together-kubelogin for more.
 `
 
 // rootOptions represents the options for the root command.

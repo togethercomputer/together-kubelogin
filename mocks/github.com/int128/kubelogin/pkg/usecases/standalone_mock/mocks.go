@@ -7,7 +7,7 @@ package standalone_mock
 import (
 	"context"
 
-	"github.com/int128/kubelogin/pkg/usecases/standalone"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/standalone"
 	mock "github.com/stretchr/testify/mock"
 )
 

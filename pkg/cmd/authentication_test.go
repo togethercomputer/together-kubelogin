@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/int128/kubelogin/pkg/oidc/client"
-	"github.com/int128/kubelogin/pkg/usecases/authentication"
-	"github.com/int128/kubelogin/pkg/usecases/authentication/authcode"
-	"github.com/int128/kubelogin/pkg/usecases/authentication/ropc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/authcode"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/ropc"
 	"github.com/spf13/pflag"
 )
 

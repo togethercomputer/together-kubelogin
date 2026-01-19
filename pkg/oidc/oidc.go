@@ -6,7 +6,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/int128/kubelogin/pkg/jwt"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/jwt"
 )
 
 // Provider represents an OIDC provider.

@@ -5,7 +5,7 @@
 package logger_mock
 
 import (
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
 	"github.com/spf13/pflag"
 	mock "github.com/stretchr/testify/mock"
 )

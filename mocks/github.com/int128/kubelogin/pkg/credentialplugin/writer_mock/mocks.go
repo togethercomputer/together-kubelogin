@@ -5,7 +5,7 @@
 package writer_mock
 
 import (
-	"github.com/int128/kubelogin/pkg/credentialplugin"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin"
 	mock "github.com/stretchr/testify/mock"
 )
 

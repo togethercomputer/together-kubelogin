@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/int128/kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
 	"github.com/spf13/pflag"
 )
 

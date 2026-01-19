@@ -7,8 +7,8 @@ package repository_mock
 import (
 	"io"
 
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/tokencache"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
 	mock "github.com/stretchr/testify/mock"
 )
 

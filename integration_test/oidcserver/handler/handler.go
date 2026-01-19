@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/int128/kubelogin/integration_test/oidcserver/service"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/service"
 )
 
 func Register(t *testing.T, mux *http.ServeMux, provider service.Provider) {

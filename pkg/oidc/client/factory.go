@@ -9,13 +9,13 @@ import (
 
 	gooidc "github.com/coreos/go-oidc/v3/oidc"
 	"github.com/google/wire"
-	"github.com/int128/kubelogin/pkg/infrastructure/clock"
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/oidc/client/transport"
-	"github.com/int128/kubelogin/pkg/pkce"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig/loader"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/clock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client/transport"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig/loader"
 	"golang.org/x/oauth2"
 )
 

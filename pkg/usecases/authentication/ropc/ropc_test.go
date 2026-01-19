@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/int128/kubelogin/mocks/github.com/int128/kubelogin/pkg/infrastructure/reader_mock"
-	"github.com/int128/kubelogin/mocks/github.com/int128/kubelogin/pkg/oidc/client_mock"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/testing/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/reader_mock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client_mock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
 	"github.com/stretchr/testify/mock"
 )
 

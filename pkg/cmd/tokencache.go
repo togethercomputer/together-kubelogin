@@ -6,12 +6,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/int128/kubelogin/pkg/tokencache"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
 	"github.com/spf13/pflag"
 )
 
 func getDefaultTokenCacheDir() string {
-	// https://github.com/int128/kubelogin/pull/975
+	// https://github.com/pahluwalia-tcloud/together-kubelogin/pull/975
 	if kubeCacheDir, ok := os.LookupEnv("KUBECACHEDIR"); ok {
 		return filepath.Join(kubeCacheDir, "oidc-login")
 	}

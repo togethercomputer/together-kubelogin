@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
-	"github.com/int128/kubelogin/pkg/infrastructure/reader"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/oidc/client"
-	"github.com/int128/kubelogin/pkg/pkce"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/reader"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
 )
 
 const keyboardPrompt = "Enter code: "

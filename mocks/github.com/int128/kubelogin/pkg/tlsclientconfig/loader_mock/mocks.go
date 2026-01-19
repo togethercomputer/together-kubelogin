@@ -7,7 +7,7 @@ package loader_mock
 import (
 	"crypto/tls"
 
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
 	mock "github.com/stretchr/testify/mock"
 )
 

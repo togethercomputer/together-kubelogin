@@ -5,8 +5,8 @@
 package service_mock
 
 import (
-	"github.com/int128/kubelogin/integration_test/oidcserver/service"
-	"github.com/int128/kubelogin/integration_test/oidcserver/testconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/service"
+	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/testconfig"
 	mock "github.com/stretchr/testify/mock"
 )
 

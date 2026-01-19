@@ -5,14 +5,14 @@ import (
 	"fmt"
 
 	"github.com/google/wire"
-	"github.com/int128/kubelogin/pkg/infrastructure/clock"
-	"github.com/int128/kubelogin/pkg/infrastructure/logger"
-	"github.com/int128/kubelogin/pkg/kubeconfig"
-	"github.com/int128/kubelogin/pkg/kubeconfig/loader"
-	"github.com/int128/kubelogin/pkg/kubeconfig/writer"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
-	"github.com/int128/kubelogin/pkg/usecases/authentication"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/clock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig/loader"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig/writer"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
 )
 
 // Set provides the use-case.
@@ -40,7 +40,7 @@ To show the setup instruction:
 
 	kubectl oidc-login setup
 
-See https://github.com/int128/kubelogin for more.
+See https://github.com/pahluwalia-tcloud/together-kubelogin for more.
 `
 
 // Standalone provides the use case of explicit login.

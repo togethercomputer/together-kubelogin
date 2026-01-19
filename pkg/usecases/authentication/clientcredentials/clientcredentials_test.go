@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/int128/kubelogin/mocks/github.com/int128/kubelogin/pkg/oidc/client_mock"
-	"github.com/int128/kubelogin/pkg/oidc"
-	"github.com/int128/kubelogin/pkg/oidc/client"
-	"github.com/int128/kubelogin/pkg/testing/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client_mock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
 )
 
 func TestClientCredentials(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
 	"github.com/spf13/pflag"
 )
 

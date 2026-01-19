@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/int128/kubelogin/mocks/github.com/int128/kubelogin/pkg/usecases/authentication_mock"
-	"github.com/int128/kubelogin/pkg/oidc"
-	testingJWT "github.com/int128/kubelogin/pkg/testing/jwt"
-	"github.com/int128/kubelogin/pkg/testing/logger"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
-	"github.com/int128/kubelogin/pkg/usecases/authentication"
+	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication_mock"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	testingJWT "github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/jwt"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
 )
 
 func TestSetup_Do(t *testing.T) {

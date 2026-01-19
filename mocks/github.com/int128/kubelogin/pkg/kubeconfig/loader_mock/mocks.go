@@ -5,7 +5,7 @@
 package loader_mock
 
 import (
-	"github.com/int128/kubelogin/pkg/kubeconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
 	mock "github.com/stretchr/testify/mock"
 )
 

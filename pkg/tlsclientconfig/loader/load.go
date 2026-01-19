@@ -10,7 +10,7 @@ import (
 	"os"
 
 	"github.com/google/wire"
-	"github.com/int128/kubelogin/pkg/tlsclientconfig"
+	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
 )
 
 // Set provides an implementation and interface.
