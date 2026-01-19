@@ -7,11 +7,11 @@ package client_mock
 import (
 	"context"
 
+	"github.com/int128/oauth2dev"
 	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
 	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
 	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
 	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
-	"github.com/int128/oauth2dev"
 	mock "github.com/stretchr/testify/mock"
 )
 

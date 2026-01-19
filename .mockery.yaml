@@ -3,7 +3,7 @@ pkgname: '{{.SrcPackageName}}_mock'
 filename: mocks.go
 template: testify
 packages:
-  github.com/int128/kubelogin:
+  github.com/pahluwalia-tcloud/together-kubelogin:
     config:
       all: true
       recursive: true
