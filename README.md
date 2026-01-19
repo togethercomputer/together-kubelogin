@@ -19,12 +19,12 @@ Build from source or download from releases:
 
 ```sh
 # Build from source
-git clone https://github.com/YOUR_ORG/together-kubelogin.git
+git clone https://github.com/pahluwalia-tcloud/together-kubelogin.git
 cd together-kubelogin
 make build
 
 # Copy binary to PATH as kubectl plugin
-sudo cp bin/together-kubelogin /usr/local/bin/kubectl-together_login
+sudo cp bin/kubelogin /usr/local/bin/kubectl-together_login
 ```
 
 The binary must be named `kubectl-together_login` on your PATH.
