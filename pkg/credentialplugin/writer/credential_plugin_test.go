@@ -35,7 +35,7 @@ func TestWriter_Write(t *testing.T) {
 		assert.Equal(t, "client.authentication.k8s.io/v1beta1", execCred.APIVersion)
 		assert.Equal(t, "ExecCredential", execCred.Kind)
 		assert.Equal(t, "test-token-v1beta1", execCred.Status.Token)
-		assert.Equal(t, expiryTime.Unix(), execCred.Status.ExpirationTimestamp.Time.Unix())
+		assert.Equal(t, expiryTime.Unix(), execCred.Status.ExpirationTimestamp.Unix())
 	})
 
 	t.Run("V1", func(t *testing.T) {
@@ -57,7 +57,7 @@ func TestWriter_Write(t *testing.T) {
 		assert.Equal(t, "client.authentication.k8s.io/v1", execCred.APIVersion)
 		assert.Equal(t, "ExecCredential", execCred.Kind)
 		assert.Equal(t, "test-token-v1", execCred.Status.Token)
-		assert.Equal(t, expiryTime.Unix(), execCred.Status.ExpirationTimestamp.Time.Unix())
+		assert.Equal(t, expiryTime.Unix(), execCred.Status.ExpirationTimestamp.Unix())
 	})
 
 	t.Run("EmptyAPIVersion_DefaultsToV1Beta1", func(t *testing.T) {
