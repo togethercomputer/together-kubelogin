@@ -46,13 +46,14 @@ users:
           - get-token
           - --oidc-issuer-url=https://auth.together.ai    # Together AI OIDC issuer
           - --oidc-client-id=YOUR_TOGETHER_CLIENT_ID
-          - --oidc-client-secret=YOUR_TOGETHER_CLIENT_SECRET  # Optional
 ```
 
 **Together AI OIDC Configuration:**
 - **Issuer URL**: `https://auth.together.ai` (placeholder - use your actual Together AI OIDC issuer)
 - **Client ID**: Obtain from Together AI platform
-- **Client Secret**: Optional, depending on your OIDC configuration
+- **Client Secret**: Optional, depending on your OIDC configuration. Can be provided via:
+  - Environment variable: `export OIDC_CLIENT_SECRET=YOUR_SECRET` (recommended)
+  - Command-line flag: `--oidc-client-secret=YOUR_SECRET` in kubeconfig args
 
 See the [setup guide](docs/setup.md) for complete details on:
 - Setting up the Kubernetes API server OIDC flags
