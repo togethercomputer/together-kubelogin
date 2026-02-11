@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/browser_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/infrastructure/browser_mock"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/oidc/client_mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/logger"
 	"github.com/int128/oauth2dev"
 	"github.com/stretchr/testify/mock"
 )

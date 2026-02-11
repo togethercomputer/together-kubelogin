@@ -8,16 +8,16 @@ import (
 	"fmt"
 
 	"github.com/google/wire"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin"
-	credentialpluginreader "github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin/reader"
-	credentialpluginwriter "github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin/writer"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/clock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache/repository"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
+	"github.com/togethercomputer/together-kubelogin/pkg/credentialplugin"
+	credentialpluginreader "github.com/togethercomputer/together-kubelogin/pkg/credentialplugin/reader"
+	credentialpluginwriter "github.com/togethercomputer/together-kubelogin/pkg/credentialplugin/writer"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/clock"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/tokencache"
+	"github.com/togethercomputer/together-kubelogin/pkg/tokencache/repository"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication"
 )
 
 var Set = wire.NewSet(

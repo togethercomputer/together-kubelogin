@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/di"
+	"github.com/togethercomputer/together-kubelogin/pkg/di"
 )
 
 var version = "HEAD"

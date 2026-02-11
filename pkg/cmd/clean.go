@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/clean"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/clean"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

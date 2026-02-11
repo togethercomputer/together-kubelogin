@@ -3,7 +3,7 @@ package cmd
 import (
 	"crypto/tls"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
 	"github.com/spf13/pflag"
 )
 

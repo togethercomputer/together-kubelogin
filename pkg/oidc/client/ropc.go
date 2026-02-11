@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
 )
 
 // GetTokenByROPC performs the resource owner password credentials flow.

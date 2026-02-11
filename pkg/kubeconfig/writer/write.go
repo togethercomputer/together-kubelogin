@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/google/wire"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/kubeconfig"
 	"k8s.io/client-go/tools/clientcmd"
 )
 

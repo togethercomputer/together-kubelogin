@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
 )
 
 func TestLoader_Load(t *testing.T) {

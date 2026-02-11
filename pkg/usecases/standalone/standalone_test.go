@@ -7,16 +7,16 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig/loader_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig/writer_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/clock"
-	testingJWT "github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/jwt"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/kubeconfig/loader_mock"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/kubeconfig/writer_mock"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication_mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/kubeconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/clock"
+	testingJWT "github.com/togethercomputer/together-kubelogin/pkg/testing/jwt"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication"
 )
 
 func TestStandalone_Do(t *testing.T) {

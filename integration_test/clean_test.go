@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/httpdriver"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/di"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/clock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
+	"github.com/togethercomputer/together-kubelogin/integration_test/httpdriver"
+	"github.com/togethercomputer/together-kubelogin/pkg/di"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/clock"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/logger"
 )
 
 func TestClean(t *testing.T) {

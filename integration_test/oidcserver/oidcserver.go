@@ -10,10 +10,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/keypair"
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/handler"
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/service"
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/testconfig"
+	"github.com/togethercomputer/together-kubelogin/integration_test/keypair"
+	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/handler"
+	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/service"
+	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/testconfig"
 )
 
 // New starts a server for the OpenID Connect provider.

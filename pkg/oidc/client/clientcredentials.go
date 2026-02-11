@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 )

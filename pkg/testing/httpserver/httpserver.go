@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/authcode"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/authcode"
 )
 
 func main() {

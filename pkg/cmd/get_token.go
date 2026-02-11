@@ -3,10 +3,11 @@ package cmd
 import (
 	"errors"
 	"fmt"
+	"os"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/credentialplugin"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/credentialplugin"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )
@@ -30,7 +31,7 @@ type getTokenOptions struct {
 func (o *getTokenOptions) addFlags(f *pflag.FlagSet) {
 	f.StringVar(&o.IssuerURL, "oidc-issuer-url", "", "Issuer URL of the provider (mandatory)")
 	f.StringVar(&o.ClientID, "oidc-client-id", "", "Client ID of the provider (mandatory)")
-	f.StringVar(&o.ClientSecret, "oidc-client-secret", "", "Client secret of the provider")
+	f.StringVar(&o.ClientSecret, "oidc-client-secret", "", "Client secret of the provider (can also be set via OIDC_CLIENT_SECRET environment variable)")
 	f.StringVar(&o.RedirectURL, "oidc-redirect-url", "", "[authcode, authcode-keyboard] Redirect URL")
 	f.StringSliceVar(&o.ExtraScopes, "oidc-extra-scope", nil, "Scopes to request to the provider")
 	f.BoolVar(&o.UseAccessToken, "oidc-use-access-token", false, "Instead of using the id_token, use the access_token to authenticate to Kubernetes")
@@ -72,6 +73,11 @@ func (cmd *GetToken) New() *cobra.Command {
 		},
 		RunE: func(c *cobra.Command, _ []string) error {
 			o.expandHomedir()
+			// Read client secret from environment variable if not provided via flag
+			clientSecret := o.ClientSecret
+			if clientSecret == "" {
+				clientSecret = os.Getenv("OIDC_CLIENT_SECRET")
+			}
 			grantOptionSet, err := o.authenticationOptions.grantOptionSet()
 			if err != nil {
 				return fmt.Errorf("get-token: %w", err)
@@ -88,7 +94,7 @@ func (cmd *GetToken) New() *cobra.Command {
 				Provider: oidc.Provider{
 					IssuerURL:      o.IssuerURL,
 					ClientID:       o.ClientID,
-					ClientSecret:   o.ClientSecret,
+					ClientSecret:   clientSecret,
 					RedirectURL:    o.RedirectURL,
 					PKCEMethod:     pkceMethod,
 					UseAccessToken: o.UseAccessToken,

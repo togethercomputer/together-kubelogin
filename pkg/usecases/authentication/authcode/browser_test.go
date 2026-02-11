@@ -6,12 +6,12 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/browser_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/infrastructure/browser_mock"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/oidc/client_mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc/client"
+	"github.com/togethercomputer/together-kubelogin/pkg/pkce"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/logger"
 	"github.com/stretchr/testify/mock"
 )
 

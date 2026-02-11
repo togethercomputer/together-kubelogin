@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/mocks/github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache/repository_mock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/testing/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
+	"github.com/togethercomputer/together-kubelogin/mocks/github.com/togethercomputer/together-kubelogin/pkg/tokencache/repository_mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/testing/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/tokencache"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -1,8 +1,8 @@
 package tokencache
 
 import (
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
 )
 
 // Key represents a key of a token cache.

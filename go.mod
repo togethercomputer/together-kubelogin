@@ -1,4 +1,4 @@
-module github.com/pahluwalia-tcloud/together-kubelogin
+module github.com/togethercomputer/together-kubelogin
 
 go 1.25.5
 

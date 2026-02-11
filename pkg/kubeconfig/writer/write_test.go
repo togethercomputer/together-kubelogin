@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/kubeconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/kubeconfig"
 )
 
 func TestKubeconfig_UpdateAuth(t *testing.T) {
