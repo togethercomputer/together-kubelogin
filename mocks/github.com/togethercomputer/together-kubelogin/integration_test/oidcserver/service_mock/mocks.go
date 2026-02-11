@@ -5,9 +5,9 @@
 package service_mock
 
 import (
+	mock "github.com/stretchr/testify/mock"
 	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/service"
 	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/testconfig"
-	mock "github.com/stretchr/testify/mock"
 )
 
 // NewMockService creates a new instance of MockService. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

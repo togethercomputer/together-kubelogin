@@ -7,8 +7,8 @@ package clean_mock
 import (
 	"context"
 
-	"github.com/togethercomputer/together-kubelogin/pkg/usecases/clean"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/clean"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

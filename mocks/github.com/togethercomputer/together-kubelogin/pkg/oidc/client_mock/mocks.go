@@ -8,11 +8,11 @@ import (
 	"context"
 
 	"github.com/int128/oauth2dev"
+	mock "github.com/stretchr/testify/mock"
 	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
 	"github.com/togethercomputer/together-kubelogin/pkg/oidc/client"
 	"github.com/togethercomputer/together-kubelogin/pkg/pkce"
 	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
-	mock "github.com/stretchr/testify/mock"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

@@ -7,8 +7,8 @@ package authentication_mock
 import (
 	"context"
 
-	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

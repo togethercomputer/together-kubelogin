@@ -5,9 +5,9 @@
 package logger_mock
 
 import (
-	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
 	"github.com/spf13/pflag"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

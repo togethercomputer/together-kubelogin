@@ -7,9 +7,9 @@ package repository_mock
 import (
 	"io"
 
+	mock "github.com/stretchr/testify/mock"
 	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
 	"github.com/togethercomputer/together-kubelogin/pkg/tokencache"
-	mock "github.com/stretchr/testify/mock"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

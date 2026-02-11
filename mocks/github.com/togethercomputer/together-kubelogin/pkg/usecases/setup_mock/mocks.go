@@ -7,8 +7,8 @@ package setup_mock
 import (
 	"context"
 
-	"github.com/togethercomputer/together-kubelogin/pkg/usecases/setup"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/setup"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.

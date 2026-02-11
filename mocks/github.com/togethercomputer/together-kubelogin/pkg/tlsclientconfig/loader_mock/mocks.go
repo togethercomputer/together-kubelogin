@@ -7,8 +7,8 @@ package loader_mock
 import (
 	"crypto/tls"
 
-	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
 	mock "github.com/stretchr/testify/mock"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
 )
 
 // NewMockInterface creates a new instance of MockInterface. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
