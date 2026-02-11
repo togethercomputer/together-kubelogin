@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/authcode"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/ropc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc/client"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/authcode"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/ropc"
 	"github.com/spf13/pflag"
 )
 

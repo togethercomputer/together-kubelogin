@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/google/wire"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tokencache/repository"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/tokencache"
+	"github.com/togethercomputer/together-kubelogin/pkg/tokencache/repository"
 )
 
 var Set = wire.NewSet(

@@ -5,14 +5,14 @@ import (
 	"fmt"
 
 	"github.com/google/wire"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/tlsclientconfig"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/authcode"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/clientcredentials"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/devicecode"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/usecases/authentication/ropc"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc/client"
+	"github.com/togethercomputer/together-kubelogin/pkg/tlsclientconfig"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/authcode"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/clientcredentials"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/devicecode"
+	"github.com/togethercomputer/together-kubelogin/pkg/usecases/authentication/ropc"
 )
 
 // Set provides the use-case of Authentication.

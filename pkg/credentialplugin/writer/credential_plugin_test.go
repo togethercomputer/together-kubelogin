@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin"
+	"github.com/togethercomputer/together-kubelogin/pkg/credentialplugin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	clientauthenticationv1 "k8s.io/client-go/pkg/apis/clientauthentication/v1"

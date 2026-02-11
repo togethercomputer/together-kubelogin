@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin"
+	"github.com/togethercomputer/together-kubelogin/pkg/credentialplugin"
 )
 
 func TestReader_Read(t *testing.T) {

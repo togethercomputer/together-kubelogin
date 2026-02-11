@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc/client"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc/client"
 )
 
 // DeviceCode provides the oauth2 device code flow.

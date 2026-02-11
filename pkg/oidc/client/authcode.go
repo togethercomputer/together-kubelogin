@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	gooidc "github.com/coreos/go-oidc/v3/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/pkce"
 	"github.com/int128/oauth2cli"
 	"golang.org/x/oauth2"
 )

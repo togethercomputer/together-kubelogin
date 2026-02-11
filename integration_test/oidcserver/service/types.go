@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/integration_test/oidcserver/testconfig"
+	"github.com/togethercomputer/together-kubelogin/integration_test/oidcserver/testconfig"
 )
 
 // Service represents the test service of OpenID Connect Provider.

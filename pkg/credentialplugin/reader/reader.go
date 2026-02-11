@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/google/wire"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/credentialplugin"
+	"github.com/togethercomputer/together-kubelogin/pkg/credentialplugin"
 	"k8s.io/client-go/pkg/apis/clientauthentication"
 )
 

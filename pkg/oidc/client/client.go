@@ -7,10 +7,10 @@ import (
 	"time"
 
 	gooidc "github.com/coreos/go-oidc/v3/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/clock"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/oidc"
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/pkce"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/clock"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/oidc"
+	"github.com/togethercomputer/together-kubelogin/pkg/pkce"
 	"github.com/int128/oauth2dev"
 	"golang.org/x/oauth2"
 )

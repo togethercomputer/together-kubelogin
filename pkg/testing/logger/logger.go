@@ -3,7 +3,7 @@ package logger
 import (
 	"fmt"
 
-	"github.com/pahluwalia-tcloud/together-kubelogin/pkg/infrastructure/logger"
+	"github.com/togethercomputer/together-kubelogin/pkg/infrastructure/logger"
 	"github.com/spf13/pflag"
 )
 

@@ -19,7 +19,7 @@ Build from source or download from releases:
 
 ```sh
 # Build from source
-git clone https://github.com/pahluwalia-tcloud/together-kubelogin.git
+git clone https://github.com/togethercomputer/together-kubelogin.git
 cd together-kubelogin
 make build
 
