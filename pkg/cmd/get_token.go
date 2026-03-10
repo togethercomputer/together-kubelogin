@@ -31,7 +31,7 @@ type getTokenOptions struct {
 func (o *getTokenOptions) addFlags(f *pflag.FlagSet) {
 	f.StringVar(&o.IssuerURL, "oidc-issuer-url", "", "Issuer URL of the provider (mandatory)")
 	f.StringVar(&o.ClientID, "oidc-client-id", "", "Client ID of the provider (mandatory)")
-	f.StringVar(&o.ClientSecret, "oidc-client-secret", "", "Client secret of the provider (can also be set via OIDC_CLIENT_SECRET environment variable)")
+	f.StringVar(&o.ClientSecret, "oidc-client-secret", "", "Client secret of the provider. When PKCE (S256) is enabled, the OIDC_CLIENT_SECRET env var is ignored — use this flag instead.")
 	f.StringVar(&o.RedirectURL, "oidc-redirect-url", "", "[authcode, authcode-keyboard] Redirect URL")
 	f.StringSliceVar(&o.ExtraScopes, "oidc-extra-scope", nil, "Scopes to request to the provider")
 	f.BoolVar(&o.UseAccessToken, "oidc-use-access-token", false, "Instead of using the id_token, use the access_token to authenticate to Kubernetes")
@@ -73,10 +73,16 @@ func (cmd *GetToken) New() *cobra.Command {
 		},
 		RunE: func(c *cobra.Command, _ []string) error {
 			o.expandHomedir()
-			// Read client secret from environment variable if not provided via flag
 			clientSecret := o.ClientSecret
 			if clientSecret == "" {
-				clientSecret = os.Getenv("OIDC_CLIENT_SECRET")
+				// Fall back to OIDC_CLIENT_SECRET env var, but only when PKCE is
+				// not explicitly set to S256. Providers using PKCE (Okta, Auth0)
+				// don't need a client secret — sending one causes "invalid_client".
+				// Google requires both PKCE and a secret, so Google kubeconfigs
+				// should use --oidc-client-secret flag directly instead of env var.
+				if o.pkceOptions.PKCEMethod != "S256" && !o.pkceOptions.UsePKCE {
+					clientSecret = os.Getenv("OIDC_CLIENT_SECRET")
+				}
 			}
 			grantOptionSet, err := o.authenticationOptions.grantOptionSet()
 			if err != nil {
