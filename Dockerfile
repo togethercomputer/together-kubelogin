@@ -13,8 +13,8 @@ COPY pkg pkg
 
 ARG TARGETOS
 ARG TARGETARCH
-RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build
+RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -o kubectl-together_login
 
 FROM gcr.io/distroless/base-debian12
-COPY --from=builder /builder/kubelogin /
-ENTRYPOINT ["/kubelogin"]
+COPY --from=builder /builder/kubectl-together_login /
+ENTRYPOINT ["/kubectl-together_login"]
