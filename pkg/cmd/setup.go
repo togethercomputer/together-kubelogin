@@ -18,6 +18,7 @@ type setupOptions struct {
 	RedirectURL           string
 	ExtraScopes           []string
 	UseAccessToken        bool
+	ExpectedAudience      []string
 	RequestHeaders        map[string]string
 	tlsOptions            tlsOptions
 	pkceOptions           pkceOptions
@@ -31,6 +32,7 @@ func (o *setupOptions) addFlags(f *pflag.FlagSet) {
 	f.StringVar(&o.RedirectURL, "oidc-redirect-url", "", "[authcode, authcode-keyboard] Redirect URL")
 	f.StringSliceVar(&o.ExtraScopes, "oidc-extra-scope", nil, "Scopes to request to the provider")
 	f.BoolVar(&o.UseAccessToken, "oidc-use-access-token", false, "Instead of using the id_token, use the access_token to authenticate to Kubernetes")
+	f.StringSliceVar(&o.ExpectedAudience, "oidc-expected-audience", nil, "Expected audience for the access token. If not set, defaults to the client ID. Can be specified multiple times.")
 	f.StringToStringVar(&o.RequestHeaders, "oidc-request-header", nil, "HTTP headers to send with an authentication request")
 	o.tlsOptions.addFlags(f)
 	o.pkceOptions.addFlags(f)
@@ -74,19 +76,20 @@ func (cmd *Setup) New() *cobra.Command {
 			if err != nil {
 				return fmt.Errorf("setup: %w", err)
 			}
-			in := setup.Input{
-				IssuerURL:       o.IssuerURL,
-				ClientID:        o.ClientID,
-				ClientSecret:    o.ClientSecret,
-				RedirectURL:     o.RedirectURL,
-				ExtraScopes:     o.ExtraScopes,
-				UseAccessToken:  o.UseAccessToken,
-				RequestHeaders:  o.RequestHeaders,
-				PKCEMethod:      pkceMethod,
-				GrantOptionSet:  grantOptionSet,
-				TLSClientConfig: o.tlsOptions.tlsClientConfig(),
-				ChangedFlags:    changedFlags,
-			}
+in := setup.Input{
+			IssuerURL:        o.IssuerURL,
+			ClientID:         o.ClientID,
+			ClientSecret:     o.ClientSecret,
+			RedirectURL:      o.RedirectURL,
+			ExtraScopes:      o.ExtraScopes,
+			UseAccessToken:   o.UseAccessToken,
+			ExpectedAudience: o.ExpectedAudience,
+			RequestHeaders:   o.RequestHeaders,
+			PKCEMethod:       pkceMethod,
+			GrantOptionSet:   grantOptionSet,
+			TLSClientConfig:  o.tlsOptions.tlsClientConfig(),
+			ChangedFlags:     changedFlags,
+		}
 			if in.IssuerURL == "" || in.ClientID == "" {
 				return c.Help()
 			}

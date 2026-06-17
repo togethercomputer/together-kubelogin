@@ -82,6 +82,7 @@ func (f *Factory) New(ctx context.Context, prov oidc.Provider, tlsClientConfig t
 		logger:               f.Logger,
 		negotiatedPKCEMethod: determinePKCEMethod(supportedPKCEMethods, prov.PKCEMethod),
 		useAccessToken:       prov.UseAccessToken,
+		expectedAudience:     prov.ExpectedAudience,
 	}, nil
 }
 

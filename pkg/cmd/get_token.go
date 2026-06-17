@@ -20,6 +20,7 @@ type getTokenOptions struct {
 	RedirectURL           string
 	ExtraScopes           []string
 	UseAccessToken        bool
+	ExpectedAudience      []string
 	RequestHeaders        map[string]string
 	tokenCacheOptions     tokenCacheOptions
 	tlsOptions            tlsOptions
@@ -35,6 +36,7 @@ func (o *getTokenOptions) addFlags(f *pflag.FlagSet) {
 	f.StringVar(&o.RedirectURL, "oidc-redirect-url", "", "[authcode, authcode-keyboard] Redirect URL")
 	f.StringSliceVar(&o.ExtraScopes, "oidc-extra-scope", nil, "Scopes to request to the provider")
 	f.BoolVar(&o.UseAccessToken, "oidc-use-access-token", false, "Instead of using the id_token, use the access_token to authenticate to Kubernetes")
+	f.StringSliceVar(&o.ExpectedAudience, "oidc-expected-audience", nil, "Expected audience for the access token. If not set, defaults to the client ID. Can be specified multiple times.")
 	f.StringToStringVar(&o.RequestHeaders, "oidc-request-header", nil, "HTTP headers to send with an authentication request")
 	f.BoolVar(&o.ForceRefresh, "force-refresh", false, "If set, refresh the ID token regardless of its expiration time")
 	o.tokenCacheOptions.addFlags(f)
@@ -98,14 +100,15 @@ func (cmd *GetToken) New() *cobra.Command {
 			}
 			in := credentialplugin.Input{
 				Provider: oidc.Provider{
-					IssuerURL:      o.IssuerURL,
-					ClientID:       o.ClientID,
-					ClientSecret:   clientSecret,
-					RedirectURL:    o.RedirectURL,
-					PKCEMethod:     pkceMethod,
-					UseAccessToken: o.UseAccessToken,
-					ExtraScopes:    o.ExtraScopes,
-					RequestHeaders: o.RequestHeaders,
+					IssuerURL:        o.IssuerURL,
+					ClientID:         o.ClientID,
+					ClientSecret:     clientSecret,
+					RedirectURL:      o.RedirectURL,
+					PKCEMethod:       pkceMethod,
+					UseAccessToken:   o.UseAccessToken,
+					ExpectedAudience: o.ExpectedAudience,
+					ExtraScopes:      o.ExtraScopes,
+					RequestHeaders:   o.RequestHeaders,
 				},
 				ForceRefresh:     o.ForceRefresh,
 				TokenCacheConfig: tokenCacheConfig,

@@ -35,6 +35,7 @@ type client struct {
 	logger               logger.Interface
 	negotiatedPKCEMethod pkce.Method
 	useAccessToken       bool
+	expectedAudience     []string
 }
 
 func (c *client) wrapContext(ctx context.Context) context.Context {
@@ -81,11 +82,22 @@ func (c *client) verifyToken(ctx context.Context, token *oauth2.Token, nonce str
 			return nil, fmt.Errorf("access_token is missing in the token response: %#v", accessToken)
 		}
 
-		// We intentionally do not perform a ClientID check here because there
-		// are some use cases in access_tokens where we *expect* the audience
-		// to differ. For example, one can explicitly set
-		// `audience=CLUSTER_CLIENT_ID` as an extra auth parameter.
-		verifier = c.provider.Verifier(&gooidc.Config{ClientID: "", Now: c.clock.Now, SkipClientIDCheck: true})
+		// Verify the access token with audience validation.
+		// If expectedAudience is set, verify against it; otherwise fall back to ClientID.
+		// This prevents token confusion attacks where a token issued for one audience
+		// is accepted by another service.
+		var aud []string
+		if len(c.expectedAudience) > 0 {
+			aud = c.expectedAudience
+		} else {
+			aud = []string{c.oauth2Config.ClientID}
+		}
+
+		verifier = c.provider.Verifier(&gooidc.Config{
+			ClientID:         aud[0],
+			Now:              c.clock.Now,
+			SkipClientIDCheck: len(aud) == 0,
+		})
 
 		_, err := verifier.Verify(ctx, accessToken)
 		if err != nil {
