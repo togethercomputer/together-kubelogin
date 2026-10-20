@@ -2,6 +2,8 @@ module github.com/togethercomputer/together-kubelogin
 
 go 1.25.5
 
+toolchain go1.26.10
+
 require (
 	github.com/chromedp/chromedp v0.14.2
 	github.com/coreos/go-oidc/v3 v3.17.0
@@ -94,7 +96,7 @@ require (
 	github.com/fzipp/gocyclo v0.6.0 // indirect
 	github.com/ghostiam/protogetter v0.3.18 // indirect
 	github.com/go-critic/go-critic v0.14.3 // indirect
-	github.com/go-jose/go-jose/v4 v4.1.3 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-json-experiment/json v0.0.0-20250725192818-e39067aee2d2 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-toolsmith/astcast v1.1.0 // indirect
