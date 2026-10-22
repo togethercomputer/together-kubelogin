@@ -65,10 +65,17 @@ jobs:
             linux/amd64
             linux/arm64
             linux/ppc64le
-      - uses: int128/docker-build-metadata-action@f38781ddbaa410e9f8fa55a291dce7480798f1a0 # v1.2.0
-        id: build-metadata
-        with:
-          metadata: ${{ steps.build.outputs.metadata }}
+      # Same logic as int128/docker-build-metadata-action, but without passing the whole
+      # metadata as an action input: with provenance mode=max it embeds the GitHub event
+      # payload per platform and can exceed the 128 KiB env var limit ("Argument list too long").
+      - id: build-metadata
+        env:
+          IMAGE_NAME: ${{ fromJSON(steps.build.outputs.metadata)['image.name'] }}
+          IMAGE_DIGEST: ${{ fromJSON(steps.build.outputs.metadata)['containerimage.digest'] }}
+        run: |
+          if [[ -n "$IMAGE_NAME" && -n "$IMAGE_DIGEST" ]]; then
+            echo "image-uri=${IMAGE_NAME%%,*}@${IMAGE_DIGEST}" >> "$GITHUB_OUTPUT"
+          fi
 
   test:
     if: needs.build.outputs.image-uri != ''
