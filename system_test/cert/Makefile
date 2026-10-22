@@ -5,8 +5,8 @@ ca.key:
 	openssl genrsa -out $@ 2048
 ca.csr: ca.key
 	openssl req -new -key ca.key -out $@ -subj "/CN=dex-ca" -config openssl.cnf
-ca.crt: ca.key ca.csr
-	openssl x509 -req -in ca.csr -signkey ca.key -out $@ -days 10
+ca.crt: openssl.cnf ca.key ca.csr
+	openssl x509 -req -in ca.csr -signkey ca.key -out $@ -days 10 -extensions v3_ca -extfile openssl.cnf
 server.key:
 	openssl genrsa -out $@ 2048
 server.csr: openssl.cnf server.key
