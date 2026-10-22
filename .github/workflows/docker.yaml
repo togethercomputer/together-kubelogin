@@ -48,7 +48,7 @@ jobs:
       - uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3.7.0
       - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
       - name: Set up Chalk
-        uses: crashappsec/setup-chalk-action@main
+        uses: crashappsec/setup-chalk-action@fcbf900108b204d347ba562f250d5bb4f2143f81 # main
         continue-on-error: true
         with:
           connect: true
@@ -65,10 +65,17 @@ jobs:
             linux/amd64
             linux/arm64
             linux/ppc64le
-      - uses: int128/docker-build-metadata-action@f38781ddbaa410e9f8fa55a291dce7480798f1a0 # v1.2.0
-        id: build-metadata
-        with:
-          metadata: ${{ steps.build.outputs.metadata }}
+      # Same logic as int128/docker-build-metadata-action, but without passing the whole
+      # metadata as an action input: with provenance mode=max it embeds the GitHub event
+      # payload per platform and can exceed the 128 KiB env var limit ("Argument list too long").
+      - id: build-metadata
+        env:
+          IMAGE_NAME: ${{ fromJSON(steps.build.outputs.metadata)['image.name'] }}
+          IMAGE_DIGEST: ${{ fromJSON(steps.build.outputs.metadata)['containerimage.digest'] }}
+        run: |
+          if [[ -n "$IMAGE_NAME" && -n "$IMAGE_DIGEST" ]]; then
+            echo "image-uri=${IMAGE_NAME%%,*}@${IMAGE_DIGEST}" >> "$GITHUB_OUTPUT"
+          fi
 
   test:
     if: needs.build.outputs.image-uri != ''
