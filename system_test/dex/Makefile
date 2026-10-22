@@ -5,8 +5,11 @@ dex: dex.yaml
 	# Wait for kind network.
 	until docker network inspect kind; do sleep 1; done
 
+	# Build dex with upgraded ca-certificates (see Dockerfile).
+	docker build -q -t dex-server:local .
+
 	# Create a container.
-	docker create -q --name dex-server -p 10443:10443 --network kind ghcr.io/dexidp/dex:v2.46.1 dex serve /dex.yaml
+	docker create -q --name dex-server -p 10443:10443 --network kind dex-server:local dex serve /dex.yaml
 
 	# Deploy the config.
 	docker cp $(CERT_DIR)/server.crt dex-server:/
