@@ -6,7 +6,7 @@ dex: dex.yaml
 	until docker network inspect kind; do sleep 1; done
 
 	# Create a container.
-	docker create -q --name dex-server -p 10443:10443 --network kind ghcr.io/dexidp/dex:v2.39.0 dex serve /dex.yaml
+	docker create -q --name dex-server -p 10443:10443 --network kind ghcr.io/dexidp/dex:v2.46.1 dex serve /dex.yaml
 
 	# Deploy the config.
 	docker cp $(CERT_DIR)/server.crt dex-server:/
